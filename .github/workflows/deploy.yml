@@ -1,7 +1,6 @@
-name: Deploy to GitHub Pages
+name: CI und Veroeffentlichung
 
-# Kostenlos, weil das Repository oeffentlich ist: Actions sind dann unbegrenzt
-# inklusive der monatlichen Minuten. Private Repos rechnen nach Nutzungsdauer ab.
+# Oeffentliches Repository: GitHub Actions rechnet hier keine Minuten ab.
 on:
   push:
     branches: [main]
@@ -12,14 +11,15 @@ permissions:
   pages: write
   id-token: write
 
-# GitHub erlaubt hoechstens eine gleichzeitige Veroeffentlichung. Laeuft eine
-# neuere, wird die aeltere abgebrochen, damit nie ein aelterer Build live geht.
+# Hoechstens ein Lauf gleichzeitig. Startet ein neuer, wird der alte
+# abgebrochen, damit nie ein aelterer Build live geht.
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: true
 
 jobs:
   build:
+    name: Typen, Tests und Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,25 +41,38 @@ jobs:
       - name: Tests
         run: pnpm exec vitest run
 
-      # GitHub Pages laeuft unter /yalla-quest/, nicht an der Domainwurzel.
-      # base in vite.config.ts bekommt den Wert daher aus dieser Variable.
+      - name: Lint
+        run: pnpm exec eslint .
+
+      # Cloudflare liefert an der Domainwurzel aus, deshalb bleibt BASE_PATH
+      # leer. Fuer einen Hoster im Unterpfad hier /projektname/ eintragen.
       - name: Bauen
-        env:
-          BASE_PATH: /yalla-quest/
         run: pnpm build
 
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
+          name: dist
           path: dist
+          retention-days: 7
 
   deploy:
+    name: Cloudflare Pages
     needs: build
+    # Ohne Token laeuft die Pipeline als reine Pruefung und der Build bleibt
+    # als Artefakt erhalten. Sobald CLOUDFLARE_API_TOKEN hinterlegt ist,
+    # laeuft dieser Schritt bei jedem Push automatisch mit.
+    if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: dist aus dem Build laden
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Nach Cloudflare Pages veroeffentlichen
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 766659b5f1eadc617c87f03cd8358eed
+          command: pages deploy dist --project-name=yalla-quest --branch=main

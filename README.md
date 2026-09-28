@@ -2,7 +2,9 @@
 
 **Spielen. Entdecken. Arabisch lernen.** Ein lokales Web-Lernspiel für deutschsprachige Kinder von etwa 7 bis 12 Jahren.
 
-Jetzt kostenlos online: **<https://revucio24-web.github.io/yalla-quest/>**
+Jetzt kostenlos online: **<https://yalla-quest.pages.dev/>**
+
+Quelle: <https://github.com/revucio24-web/yalla-quest>
 
 ## Was schon spielbar ist
 
@@ -52,25 +54,40 @@ Der fertige statische Build liegt in `dist/`.
 
 Das Spiel ist kostenlos veröffentlicht unter:
 
-**<https://revucio24-web.github.io/yalla-quest/>**
+**<https://yalla-quest.pages.dev/>**
 
-### GitHub Pages (aktuell genutzt)
+### Warum Cloudflare Pages
 
-Das Repository <https://github.com/revucio24-web/yalla-quest> ist öffentlich. Jeder Push auf `main` baut die App in GitHub Actions, prüft Typen und Tests und veröffentlicht das Ergebnis. Die Einrichtung steckt vollständig in `.github/workflows/deploy.yml`; manuell starten lässt sich der Lauf über den Reiter „Actions“.
+GitHub Pages wertet die Datei `public/_headers` nicht aus. Die Security-Header wurden dort also zwar mitgebaut, aber nie vom Browser empfangen — gemessen an den echten Antwort-Headern fehlten `Content-Security-Policy`, `X-Frame-Options` und `X-Content-Type-Options` vollständig. Cloudflare Pages wertet dieselbe Datei aus und liefert alle acht Header aus. Genau deshalb wird hier veröffentlicht und nicht bei GitHub Pages.
 
-GitHub Pages liefert das Spiel unter `/yalla-quest/` aus, also nicht an der Domainwurzel. Deshalb setzt der Workflow `BASE_PATH=/yalla-quest/`, und `vite.config.ts` leitet den Wert an Vites `base` weiter. Wichtig dabei: Vite ergänzt `base` nur bei statischen Importen. Die Laufzeitpfade aus `public/` (Maskottchen und alle Audiodateien) stehen als Zeichenketten in den JSON-Daten, deshalb löst `src/lib/assets.ts` sie zur Laufzeit über `import.meta.env.BASE_URL` auf. Ohne diesen Helfer liefe auf GitHub Pages jedes Audio ins Leere, während der Build auf der lokalen Vorschau noch fehlerfrei wirkt.
+Zusätzlich spricht dafür: statische Seiten bekommen unbegrenzten Traffic, die Cache-Regeln aus `_headers` greifen tatsächlich, und das Spiel liegt an der Domainwurzel statt in einem Unterpfad.
 
-### Andere kostenlose Hoster
+### Automatische Veröffentlichung
 
-Bei Hoster, die an der Domainwurzel ausliefern, bleibt `BASE_PATH` leer:
+`.github/workflows/deploy.yml` prüft bei jedem Push auf `main` Typen, Tests, Lint und den Build. Ist im Repository das Secret `CLOUDFLARE_API_TOKEN` hinterlegt, veröffentlicht derselbe Lauf das Ergebnis auf Cloudflare Pages; fehlt es, bleibt die Pipeline eine reine Prüfung und das Ergebnis liegt als Artefakt bereit.
 
-- **Vercel:** Repository importieren, Framework „Vite“ wählen, Build-Befehl `pnpm build`, Ausgabeverzeichnis `dist`. Die Header liegen in `vercel.json`.
-- **Cloudflare Pages:** Repository verbinden, Build-Befehl `pnpm build`, Build-Ausgabeverzeichnis `dist`. Die Header liegen in `public/_headers` und werden mit nach `dist/` kopiert.
-- **Netlify:** Repository verbinden, Build-Befehl `pnpm build`, Verzeichnis `dist`, `public/_headers` wird ausgewertet.
+Das Token wird **nicht** im Quelltext und nicht in `wrangler.toml` gespeichert, sondern ausschließlich als GitHub Secret. Ein API-Token mit dem Umfang „Cloudflare Pages — Edit" reicht dafür aus.
 
-Es sind keine Umgebungsvariablen und keine Geheimnisse nötig. Aktions-Minuten sind für öffentliche Repositories unbegrenzt kostenlos.
+Manuell veroeffentlichen ohne den Weg über GitHub:
 
-Die Sicherheits-Header liegen bereits bei: `vercel.json` und `public/_headers` (wird nach `dist/` kopiert). Zusätzlich trägt `index.html` eine `Content-Security-Policy` als `<meta>`. Das ist auf GitHub Pages der einzige wirksame Weg, weil Pages keine eigenen Header auswertet. Beim Dev-Server entfernt ein kleines Plugin aus `vite.config.ts` diese Meta-Angabe, weil Vite dort Inline-Skripte und eine WebSocket-Verbindung für Hot Reload lädt, die eine strenge CSP blockieren würde.
+```bash
+pnpm build
+pnpm exec wrangler pages deploy dist --project-name yalla-quest --branch main
+```
+
+### Andere Hoster
+
+Bei Hoster, die an der Domainwurzel ausliefern, bleibt `BASE_PATH` leer. Fuer einen Hoster im Unterpfad setzt man ihn beim Build, etwa `BASE_PATH=/yalla-quest/ pnpm build`; `vite.config.ts` reicht den Wert an Vites `base` weiter. Das ist nötig, weil GitHub Pages, Netlify und manche Netlify-/Vercel-Projekte das Spiel in einem Unterordner ausliefern.
+
+Wichtig dabei: Vite ergänzt `base` nur bei statischen Importen. Die Laufzeitpfade aus `public/` (Maskottchen und alle Audiodateien) stehen als Zeichenketten in den JSON-Daten, deshalb löst `src/lib/assets.ts` sie zur Laufzeit über den Vite-Basispfad auf. Ohne diesen Helfer liefe in einem Unterpfad jedes Audio ins Leere, während der Build auf der lokalen Vorschau noch fehlerfrei wirkt.
+
+- **Vercel:** Repository importieren, Framework „Vite“, Build `pnpm build`, Ausgabe `dist`. Header kommen aus `vercel.json`.
+- **Netlify:** Build `pnpm build`, Verzeichnis `dist`, `public/_headers` wird ausgewertet.
+- **GitHub Pages:** funktioniert technisch, wertet aber keine Header aus. Fuer dieses Spiel nicht empfohlen.
+
+Es sind keine Umgebungsvariablen und keine Geheimnisse im Projekt nötig.
+
+Die Security-Header selbst stehen in `public/_headers` und werden von Vite nach `dist/` kopiert. `index.html` traegt zusaetzlich dieselbe `Content-Security-Policy` als `<meta>`, damit die App auch bei einem Hoster ohne Header-Auswertung geschuetzt bleibt. Beim Dev-Server entfernt ein Plugin aus `vite.config.ts` diese Meta-Angabe, weil Vite dort Inline-Skripte und eine WebSocket-Verbindung fuer Hot Reload laedt, die eine strenge CSP blockieren wuerde.
 
 ## Inhalte erweitern
 
