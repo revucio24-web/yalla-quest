@@ -6,10 +6,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Nur Lesen. Die Berechtigungen fuer GitHub Pages (pages: write,
+# id-token: write) sind entfernt, seit die Veroeffentlichung ueber
+# Cloudflare laeuft. Wer sie nicht braucht, sollte sie nicht erhalten.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Hoechstens ein Lauf gleichzeitig. Startet ein neuer, wird der alte
 # abgebrochen, damit nie ein aelterer Build live geht.
@@ -58,10 +59,9 @@ jobs:
   deploy:
     name: Cloudflare Pages
     needs: build
-    # Ohne Token laeuft die Pipeline als reine Pruefung und der Build bleibt
-    # als Artefakt erhalten. Sobald CLOUDFLARE_API_TOKEN hinterlegt ist,
-    # laeuft dieser Schritt bei jedem Push automatisch mit.
-    if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    # Auto-Deploy laesst sich mit der Repository-Variable
+    # CLOUFFLARE_DEPLOY=false abschalten, ohne die Datei zu aendern.
+    if: ${{ vars.CLOUDFLARE_DEPLOY != 'false' }}
     runs-on: ubuntu-latest
     steps:
       - name: dist aus dem Build laden
@@ -70,7 +70,11 @@ jobs:
           name: dist
           path: dist
 
+      # Ohne hinterlegtes Token ueberspringen wir nur diesen Schritt, der
+      # Lauf bleibt gruen. Sobald das Secret existiert, greift der Schritt
+      # bei jedem Push automatisch.
       - name: Nach Cloudflare Pages veroeffentlichen
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
