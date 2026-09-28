@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" role="img" aria-labelledby="title">
+  <title id="title">Faris der freundliche Wüstenfuchs</title>
+  <defs>
+    <linearGradient id="fur" x1="0" x2="1" y2="1"><stop stop-color="#f7ad68"/><stop offset="1" stop-color="#e8784c"/></linearGradient>
+    <linearGradient id="body" x1="0" x2="1" y2="1"><stop stop-color="#f2a066"/><stop offset="1" stop-color="#d96d47"/></linearGradient>
+  </defs>
+  <ellipse cx="159" cy="338" rx="100" ry="14" fill="#143a46" opacity=".12"/>
+  <path d="M234 241c54 0 76 44 64 66-13 24-74 12-97-20" fill="#e58753" stroke="#ba593c" stroke-width="5"/>
+  <path d="M273 273c20 6 27 17 25 34-15 18-48 12-66 1 22 0 37-13 41-35z" fill="#fff7e7"/>
+  <path d="M96 223c-8 14-25 44-18 78 3 17 18 28 37 28h92c20 0 36-13 37-31 1-31-15-66-33-79" fill="url(#body)" stroke="#a9543c" stroke-width="5"/>
+  <path d="M123 241c-3 25-3 53 5 84h67c8-30 7-58 1-82" fill="#fff1db"/>
+  <path d="M104 266c-22 9-34 27-31 45 3 17 25 18 45 12" fill="url(#fur)" stroke="#a9543c" stroke-width="5"/>
+  <path d="M221 262c18 5 27 17 31 36 2 12-6 25-21 25l-22-4" fill="url(#fur)" stroke="#a9543c" stroke-width="5"/>
+  <path d="M96 39 85 7c-2-7-10-8-14-2L41 89c-13 32-11 68-1 95 18 48 63 75 121 75s103-27 121-75c10-27 12-63-1-95L251 5c-4-6-12-5-14 2l-11 32" fill="url(#fur)" stroke="#a9543c" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M76 91 80 40 57 102" fill="#ee8b75"/>
+  <path d="m244 91-4-51 23 62" fill="#ee8b75"/>
+  <path d="M43 155c13 20 42 26 61 19 17-6 36-8 56 7 20-15 39-13 56-7 19 7 48 1 61-19-2 56-49 102-117 102S45 211 43 155z" fill="#fff5e5"/>
+  <path d="M107 188c6-12 18-17 29-15m48 0c11-2 23 3 29 15" fill="none" stroke="#4d3940" stroke-width="7" stroke-linecap="round"/>
+  <path d="M154 192c-7 0-13 5-13 10 0 8 9 13 19 13s19-5 19-13c0-5-6-10-13-10z" fill="#513e43"/>
+  <path d="M160 214v12m0 0c-7 8-14 8-21 4m21-4c7 8 14 8 21 4" stroke="#794748" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="74" cy="204" r="10" fill="#f0a19b" opacity=".65"/><circle cx="246" cy="204" r="10" fill="#f0a19b" opacity=".65"/>
+  <path d="M116 58c20-13 68-16 93 0" fill="none" stroke="#ffd39c" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+  <path d="M100 322c-4 16-1 24 11 25h38l4-20m18 0 4 20h38c12-1 15-9 11-25" fill="#8d5044" stroke="#754440" stroke-width="4"/>
+  <path d="M113 258c14 16 31 22 47 23 17-1 34-7 48-23" fill="none" stroke="#cf6747" stroke-width="4" opacity=".5"/>
+</svg>

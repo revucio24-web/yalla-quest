@@ -1,0 +1,42 @@
+[
+  {
+    "id": "home",
+    "title": "Zuhause",
+    "subtitle": "Deine Reise beginnt",
+    "icon": "⌂",
+    "color": "#ed7e5e",
+    "building": "Haus"
+  },
+  {
+    "id": "oasis",
+    "title": "Oase",
+    "subtitle": "Natur und Farben",
+    "icon": "✿",
+    "color": "#31a69b",
+    "building": "Oase"
+  },
+  {
+    "id": "market",
+    "title": "Markt",
+    "subtitle": "Essen und Zahlen",
+    "icon": "◈",
+    "color": "#eda74b",
+    "building": "Markt"
+  },
+  {
+    "id": "school",
+    "title": "Schule",
+    "subtitle": "Wörter entdecken",
+    "icon": "✎",
+    "color": "#6b91ce",
+    "building": "Schule"
+  },
+  {
+    "id": "desert",
+    "title": "Wüste",
+    "subtitle": "Ein großes Abenteuer",
+    "icon": "✦",
+    "color": "#bd8bcd",
+    "building": "Wüstenzelt"
+  }
+]

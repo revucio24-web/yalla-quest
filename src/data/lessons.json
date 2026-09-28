@@ -1,0 +1,1892 @@
+[
+  {
+    "id": "home-01",
+    "world": "home",
+    "title": "Hallo!",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "home-hello",
+      "home-thanks",
+      "home-yes",
+      "home-no"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "home-hello",
+        "options": [
+          "home-hello",
+          "home-thanks",
+          "home-yes",
+          "home-no"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "home-thanks",
+        "options": [
+          "home-hello",
+          "home-thanks",
+          "home-yes",
+          "home-no"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "home-yes",
+        "options": [
+          "home-hello",
+          "home-thanks",
+          "home-yes"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "home-hello",
+        "options": [
+          "home-hello",
+          "home-thanks",
+          "home-yes",
+          "home-no"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "home-no"
+      },
+      {
+        "type": "scene-choice",
+        "wordId": "home-hello",
+        "options": [
+          "home-hello",
+          "home-thanks",
+          "home-yes",
+          "home-no"
+        ],
+        "prompt": "Faris wartet vor dem Haus. Begrüße ihn!",
+        "successText": "Faris winkt zurück. Willkommen!"
+      }
+    ]
+  },
+  {
+    "id": "home-02",
+    "world": "home",
+    "title": "Mein Name",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "home-name",
+      "home-your_name",
+      "home-my_name",
+      "home-friend"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "home-name",
+        "options": [
+          "home-name",
+          "home-your_name",
+          "home-my_name",
+          "home-friend"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "home-your_name",
+        "options": [
+          "home-name",
+          "home-your_name",
+          "home-my_name",
+          "home-friend"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "home-my_name",
+        "options": [
+          "home-name",
+          "home-your_name",
+          "home-my_name"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "home-name",
+        "options": [
+          "home-name",
+          "home-your_name",
+          "home-my_name",
+          "home-friend"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "home-name"
+      },
+      {
+        "type": "scene-choice",
+        "wordId": "home-my_name",
+        "options": [
+          "home-name",
+          "home-your_name",
+          "home-my_name",
+          "home-friend"
+        ],
+        "prompt": "Faris möchte dich kennenlernen. Wie stellst du dich vor?",
+        "successText": "Jetzt kennt Faris dich. Euer Abenteuer beginnt!"
+      }
+    ]
+  },
+  {
+    "id": "home-03",
+    "world": "home",
+    "title": "Mein Zuhause",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "home-house",
+      "home-door",
+      "home-window",
+      "home-table"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "home-house",
+        "options": [
+          "home-house",
+          "home-door",
+          "home-window",
+          "home-table"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "home-door",
+        "options": [
+          "home-house",
+          "home-door",
+          "home-window",
+          "home-table"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "home-window",
+        "options": [
+          "home-house",
+          "home-door",
+          "home-window"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "home-house",
+        "options": [
+          "home-house",
+          "home-door",
+          "home-window",
+          "home-table"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "home-door"
+      },
+      {
+        "type": "scene-choice",
+        "wordId": "home-window",
+        "options": [
+          "home-house",
+          "home-door",
+          "home-window",
+          "home-table"
+        ],
+        "prompt": "Lass die Sonne herein. Finde das Fenster!",
+        "successText": "Das Fenster öffnet sich und Sonnenlicht fällt ins Zimmer."
+      }
+    ]
+  },
+  {
+    "id": "home-04",
+    "world": "home",
+    "title": "Meine Familie",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "home-bed",
+      "home-water",
+      "home-mother",
+      "home-father"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "home-bed",
+        "options": [
+          "home-bed",
+          "home-water",
+          "home-mother",
+          "home-father"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "home-water",
+        "options": [
+          "home-bed",
+          "home-water",
+          "home-mother",
+          "home-father"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "home-mother",
+        "options": [
+          "home-bed",
+          "home-water",
+          "home-mother"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "home-bed",
+        "options": [
+          "home-bed",
+          "home-water",
+          "home-mother",
+          "home-father"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "home-mother"
+      },
+      {
+        "type": "scene-choice",
+        "wordId": "home-water",
+        "options": [
+          "home-bed",
+          "home-water",
+          "home-mother",
+          "home-father"
+        ],
+        "prompt": "Faris hat Durst. Bringe ihm Wasser!",
+        "successText": "Faris trinkt einen Schluck. Danke!"
+      }
+    ]
+  },
+  {
+    "id": "home-05",
+    "world": "home",
+    "title": "Im Zimmer",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "home-brother",
+      "home-sister",
+      "home-family",
+      "home-room"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "home-brother",
+        "options": [
+          "home-brother",
+          "home-sister",
+          "home-family",
+          "home-room"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "home-sister",
+        "options": [
+          "home-brother",
+          "home-sister",
+          "home-family",
+          "home-room"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "home-family",
+        "options": [
+          "home-brother",
+          "home-sister",
+          "home-family"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "home-brother",
+        "options": [
+          "home-brother",
+          "home-sister",
+          "home-family",
+          "home-room"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "home-brother"
+      },
+      {
+        "type": "scene-choice",
+        "wordId": "home-family",
+        "options": [
+          "home-brother",
+          "home-sister",
+          "home-family",
+          "home-room"
+        ],
+        "prompt": "Alle sind da! Finde das Wort für Familie.",
+        "successText": "Die Familie kommt zusammen. Schön, dass du da bist!"
+      }
+    ]
+  },
+  {
+    "id": "home-06",
+    "world": "home",
+    "title": "Zuhause gemeistert",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "home-chair",
+      "home-lamp",
+      "home-kitchen",
+      "home-garden"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "home-chair",
+        "options": [
+          "home-chair",
+          "home-lamp",
+          "home-kitchen",
+          "home-garden"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "home-lamp",
+        "options": [
+          "home-chair",
+          "home-lamp",
+          "home-kitchen",
+          "home-garden"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "home-kitchen",
+        "options": [
+          "home-chair",
+          "home-lamp",
+          "home-kitchen"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "home-chair",
+        "options": [
+          "home-chair",
+          "home-lamp",
+          "home-kitchen",
+          "home-garden"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "home-chair"
+      },
+      {
+        "type": "scene-choice",
+        "wordId": "home-lamp",
+        "options": [
+          "home-chair",
+          "home-lamp",
+          "home-kitchen",
+          "home-garden"
+        ],
+        "prompt": "Es wird dunkel. Finde die Lampe und schalte sie ein!",
+        "successText": "Das Licht geht an. Du hast die Zuhause-Welt geschafft!"
+      }
+    ]
+  },
+  {
+    "id": "oasis-01",
+    "world": "oasis",
+    "title": "Himmel und Sonne",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "oasis-sun",
+      "oasis-moon",
+      "oasis-tree",
+      "oasis-sky"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "oasis-sun",
+        "options": [
+          "oasis-sun",
+          "oasis-moon",
+          "oasis-tree",
+          "oasis-sky"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "oasis-moon",
+        "options": [
+          "oasis-sun",
+          "oasis-moon",
+          "oasis-tree",
+          "oasis-sky"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "oasis-tree",
+        "options": [
+          "oasis-sun",
+          "oasis-moon",
+          "oasis-tree"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "oasis-sun",
+        "options": [
+          "oasis-sun",
+          "oasis-moon",
+          "oasis-tree",
+          "oasis-sky"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "oasis-sun"
+      },
+      {
+        "type": "count",
+        "wordId": "oasis-tree",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "oasis-02",
+    "world": "oasis",
+    "title": "Am Wasser",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "oasis-earth",
+      "oasis-river",
+      "oasis-sea",
+      "oasis-flower"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "oasis-earth",
+        "options": [
+          "oasis-earth",
+          "oasis-river",
+          "oasis-sea",
+          "oasis-flower"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "oasis-river",
+        "options": [
+          "oasis-earth",
+          "oasis-river",
+          "oasis-sea",
+          "oasis-flower"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "oasis-sea",
+        "options": [
+          "oasis-earth",
+          "oasis-river",
+          "oasis-sea"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "oasis-earth",
+        "options": [
+          "oasis-earth",
+          "oasis-river",
+          "oasis-sea",
+          "oasis-flower"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "oasis-earth"
+      },
+      {
+        "type": "count",
+        "wordId": "oasis-flower",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "oasis-03",
+    "world": "oasis",
+    "title": "Pflanzenwelt",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "oasis-leaf",
+      "oasis-grass",
+      "oasis-green"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "oasis-leaf",
+        "options": [
+          "oasis-leaf",
+          "oasis-grass",
+          "oasis-green"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "oasis-grass",
+        "options": [
+          "oasis-leaf",
+          "oasis-grass",
+          "oasis-green"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "oasis-green",
+        "options": [
+          "oasis-leaf",
+          "oasis-grass",
+          "oasis-green"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "oasis-leaf",
+        "options": [
+          "oasis-leaf",
+          "oasis-grass",
+          "oasis-green"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "oasis-grass"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "oasis-green",
+        "options": [
+          "oasis-leaf",
+          "oasis-grass",
+          "oasis-green"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oasis-04",
+    "world": "oasis",
+    "title": "Bunte Oase",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "oasis-blue",
+      "oasis-yellow",
+      "oasis-red"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "oasis-blue",
+        "options": [
+          "oasis-blue",
+          "oasis-yellow",
+          "oasis-red"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "oasis-yellow",
+        "options": [
+          "oasis-blue",
+          "oasis-yellow",
+          "oasis-red"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "oasis-red",
+        "options": [
+          "oasis-blue",
+          "oasis-yellow",
+          "oasis-red"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "oasis-blue",
+        "options": [
+          "oasis-blue",
+          "oasis-yellow",
+          "oasis-red"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "oasis-blue"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "oasis-red",
+        "options": [
+          "oasis-blue",
+          "oasis-yellow",
+          "oasis-red"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oasis-05",
+    "world": "oasis",
+    "title": "Wetter und Wolken",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "oasis-white",
+      "oasis-black",
+      "oasis-rain"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "oasis-white",
+        "options": [
+          "oasis-white",
+          "oasis-black",
+          "oasis-rain"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "oasis-black",
+        "options": [
+          "oasis-white",
+          "oasis-black",
+          "oasis-rain"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "oasis-rain",
+        "options": [
+          "oasis-white",
+          "oasis-black",
+          "oasis-rain"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "oasis-white",
+        "options": [
+          "oasis-white",
+          "oasis-black",
+          "oasis-rain"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "oasis-rain"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "oasis-rain",
+        "options": [
+          "oasis-white",
+          "oasis-black",
+          "oasis-rain"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oasis-06",
+    "world": "oasis",
+    "title": "Oasen-Abenteuer",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "oasis-cloud",
+      "oasis-stone",
+      "oasis-mountain"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "oasis-cloud",
+        "options": [
+          "oasis-cloud",
+          "oasis-stone",
+          "oasis-mountain"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "oasis-stone",
+        "options": [
+          "oasis-cloud",
+          "oasis-stone",
+          "oasis-mountain"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "oasis-mountain",
+        "options": [
+          "oasis-cloud",
+          "oasis-stone",
+          "oasis-mountain"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "oasis-cloud",
+        "options": [
+          "oasis-cloud",
+          "oasis-stone",
+          "oasis-mountain"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "oasis-stone"
+      },
+      {
+        "type": "count",
+        "wordId": "oasis-stone",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "market-01",
+    "world": "market",
+    "title": "Obststand",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "market-apple",
+      "market-banana",
+      "market-orange",
+      "market-date"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "market-apple",
+        "options": [
+          "market-apple",
+          "market-banana",
+          "market-orange",
+          "market-date"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "market-banana",
+        "options": [
+          "market-apple",
+          "market-banana",
+          "market-orange",
+          "market-date"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "market-orange",
+        "options": [
+          "market-apple",
+          "market-banana",
+          "market-orange"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "market-apple",
+        "options": [
+          "market-apple",
+          "market-banana",
+          "market-orange",
+          "market-date"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "market-banana"
+      },
+      {
+        "type": "count",
+        "wordId": "market-apple",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "market-02",
+    "world": "market",
+    "title": "Frühstück",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "market-bread",
+      "market-milk",
+      "market-juice",
+      "market-cheese"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "market-bread",
+        "options": [
+          "market-bread",
+          "market-milk",
+          "market-juice",
+          "market-cheese"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "market-milk",
+        "options": [
+          "market-bread",
+          "market-milk",
+          "market-juice",
+          "market-cheese"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "market-juice",
+        "options": [
+          "market-bread",
+          "market-milk",
+          "market-juice"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "market-bread",
+        "options": [
+          "market-bread",
+          "market-milk",
+          "market-juice",
+          "market-cheese"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "market-bread"
+      },
+      {
+        "type": "count",
+        "wordId": "market-bread",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "market-03",
+    "world": "market",
+    "title": "Leckere Sachen",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "market-egg",
+      "market-fish",
+      "market-rice"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "market-egg",
+        "options": [
+          "market-egg",
+          "market-fish",
+          "market-rice"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "market-fish",
+        "options": [
+          "market-egg",
+          "market-fish",
+          "market-rice"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "market-rice",
+        "options": [
+          "market-egg",
+          "market-fish",
+          "market-rice"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "market-egg",
+        "options": [
+          "market-egg",
+          "market-fish",
+          "market-rice"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "market-fish"
+      },
+      {
+        "type": "count",
+        "wordId": "market-egg",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "market-04",
+    "world": "market",
+    "title": "Zahlen bis drei",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "market-salt",
+      "market-sugar",
+      "market-one"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "market-salt",
+        "options": [
+          "market-salt",
+          "market-sugar",
+          "market-one"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "market-sugar",
+        "options": [
+          "market-salt",
+          "market-sugar",
+          "market-one"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "market-one",
+        "options": [
+          "market-salt",
+          "market-sugar",
+          "market-one"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "market-salt",
+        "options": [
+          "market-salt",
+          "market-sugar",
+          "market-one"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "market-salt"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "market-one",
+        "options": [
+          "market-salt",
+          "market-sugar",
+          "market-one"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "market-05",
+    "world": "market",
+    "title": "Zahlen bis fünf",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "market-two",
+      "market-three",
+      "market-four"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "market-two",
+        "options": [
+          "market-two",
+          "market-three",
+          "market-four"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "market-three",
+        "options": [
+          "market-two",
+          "market-three",
+          "market-four"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "market-four",
+        "options": [
+          "market-two",
+          "market-three",
+          "market-four"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "market-two",
+        "options": [
+          "market-two",
+          "market-three",
+          "market-four"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "market-two"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "market-four",
+        "options": [
+          "market-two",
+          "market-three",
+          "market-four"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "market-06",
+    "world": "market",
+    "title": "Markt-Mission",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "market-five",
+      "market-market",
+      "market-basket"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "market-five",
+        "options": [
+          "market-five",
+          "market-market",
+          "market-basket"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "market-market",
+        "options": [
+          "market-five",
+          "market-market",
+          "market-basket"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "market-basket",
+        "options": [
+          "market-five",
+          "market-market",
+          "market-basket"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "market-five",
+        "options": [
+          "market-five",
+          "market-market",
+          "market-basket"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "market-market"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "market-basket",
+        "options": [
+          "market-five",
+          "market-market",
+          "market-basket"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school-01",
+    "world": "school",
+    "title": "In der Schule",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "school-school",
+      "school-book",
+      "school-pen",
+      "school-notebook"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "school-school",
+        "options": [
+          "school-school",
+          "school-book",
+          "school-pen",
+          "school-notebook"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "school-book",
+        "options": [
+          "school-school",
+          "school-book",
+          "school-pen",
+          "school-notebook"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "school-pen",
+        "options": [
+          "school-school",
+          "school-book",
+          "school-pen"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "school-school",
+        "options": [
+          "school-school",
+          "school-book",
+          "school-pen",
+          "school-notebook"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "school-pen"
+      },
+      {
+        "type": "count",
+        "wordId": "school-book",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "school-02",
+    "world": "school",
+    "title": "Meine Tasche",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "school-bag",
+      "school-teacher_m",
+      "school-teacher_f",
+      "school-student_m"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "school-bag",
+        "options": [
+          "school-bag",
+          "school-teacher_m",
+          "school-teacher_f",
+          "school-student_m"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "school-teacher_m",
+        "options": [
+          "school-bag",
+          "school-teacher_m",
+          "school-teacher_f",
+          "school-student_m"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "school-teacher_f",
+        "options": [
+          "school-bag",
+          "school-teacher_m",
+          "school-teacher_f"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "school-bag",
+        "options": [
+          "school-bag",
+          "school-teacher_m",
+          "school-teacher_f",
+          "school-student_m"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "school-teacher_m"
+      },
+      {
+        "type": "count",
+        "wordId": "school-bag",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "school-03",
+    "world": "school",
+    "title": "Alle lernen",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "school-student_f",
+      "school-lesson",
+      "school-question"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "school-student_f",
+        "options": [
+          "school-student_f",
+          "school-lesson",
+          "school-question"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "school-lesson",
+        "options": [
+          "school-student_f",
+          "school-lesson",
+          "school-question"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "school-question",
+        "options": [
+          "school-student_f",
+          "school-lesson",
+          "school-question"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "school-student_f",
+        "options": [
+          "school-student_f",
+          "school-lesson",
+          "school-question"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "school-lesson"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "school-question",
+        "options": [
+          "school-student_f",
+          "school-lesson",
+          "school-question"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school-04",
+    "world": "school",
+    "title": "Fragen und Antworten",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "school-answer",
+      "school-letter",
+      "school-word"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "school-answer",
+        "options": [
+          "school-answer",
+          "school-letter",
+          "school-word"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "school-letter",
+        "options": [
+          "school-answer",
+          "school-letter",
+          "school-word"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "school-word",
+        "options": [
+          "school-answer",
+          "school-letter",
+          "school-word"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "school-answer",
+        "options": [
+          "school-answer",
+          "school-letter",
+          "school-word"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "school-letter"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "school-word",
+        "options": [
+          "school-answer",
+          "school-letter",
+          "school-word"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school-05",
+    "world": "school",
+    "title": "Wörter und Zahlen",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "school-number",
+      "school-page",
+      "school-board"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "school-number",
+        "options": [
+          "school-number",
+          "school-page",
+          "school-board"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "school-page",
+        "options": [
+          "school-number",
+          "school-page",
+          "school-board"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "school-board",
+        "options": [
+          "school-number",
+          "school-page",
+          "school-board"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "school-number",
+        "options": [
+          "school-number",
+          "school-page",
+          "school-board"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "school-number"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "school-board",
+        "options": [
+          "school-number",
+          "school-page",
+          "school-board"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school-06",
+    "world": "school",
+    "title": "Schul-Mission",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "school-ruler",
+      "school-eraser",
+      "school-desk"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "school-ruler",
+        "options": [
+          "school-ruler",
+          "school-eraser",
+          "school-desk"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "school-eraser",
+        "options": [
+          "school-ruler",
+          "school-eraser",
+          "school-desk"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "school-desk",
+        "options": [
+          "school-ruler",
+          "school-eraser",
+          "school-desk"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "school-ruler",
+        "options": [
+          "school-ruler",
+          "school-eraser",
+          "school-desk"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "school-desk"
+      },
+      {
+        "type": "count",
+        "wordId": "school-ruler",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "desert-01",
+    "world": "desert",
+    "title": "Sand und Kamel",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "desert-desert",
+      "desert-sand",
+      "desert-camel",
+      "desert-fox"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "desert-desert",
+        "options": [
+          "desert-desert",
+          "desert-sand",
+          "desert-camel",
+          "desert-fox"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "desert-sand",
+        "options": [
+          "desert-desert",
+          "desert-sand",
+          "desert-camel",
+          "desert-fox"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "desert-camel",
+        "options": [
+          "desert-desert",
+          "desert-sand",
+          "desert-camel"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "desert-desert",
+        "options": [
+          "desert-desert",
+          "desert-sand",
+          "desert-camel",
+          "desert-fox"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "desert-sand"
+      },
+      {
+        "type": "count",
+        "wordId": "desert-camel",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "id": "desert-02",
+    "world": "desert",
+    "title": "Unter den Sternen",
+    "subtitle": "4 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "desert-bird",
+      "desert-star",
+      "desert-road",
+      "desert-tent"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "desert-bird",
+        "options": [
+          "desert-bird",
+          "desert-star",
+          "desert-road",
+          "desert-tent"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "desert-star",
+        "options": [
+          "desert-bird",
+          "desert-star",
+          "desert-road",
+          "desert-tent"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "desert-road",
+        "options": [
+          "desert-bird",
+          "desert-star",
+          "desert-road"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "desert-bird",
+        "options": [
+          "desert-bird",
+          "desert-star",
+          "desert-road",
+          "desert-tent"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "desert-bird"
+      },
+      {
+        "type": "count",
+        "wordId": "desert-bird",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "id": "desert-03",
+    "world": "desert",
+    "title": "Durch die Wüste",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "desert-night",
+      "desert-day",
+      "desert-east"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "desert-night",
+        "options": [
+          "desert-night",
+          "desert-day",
+          "desert-east"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "desert-day",
+        "options": [
+          "desert-night",
+          "desert-day",
+          "desert-east"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "desert-east",
+        "options": [
+          "desert-night",
+          "desert-day",
+          "desert-east"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "desert-night",
+        "options": [
+          "desert-night",
+          "desert-day",
+          "desert-east"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "desert-night"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "desert-east",
+        "options": [
+          "desert-night",
+          "desert-day",
+          "desert-east"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "desert-04",
+    "world": "desert",
+    "title": "Wohin geht's?",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "desert-west",
+      "desert-north",
+      "desert-south"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "desert-west",
+        "options": [
+          "desert-west",
+          "desert-north",
+          "desert-south"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "desert-north",
+        "options": [
+          "desert-west",
+          "desert-north",
+          "desert-south"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "desert-south",
+        "options": [
+          "desert-west",
+          "desert-north",
+          "desert-south"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "desert-west",
+        "options": [
+          "desert-west",
+          "desert-north",
+          "desert-south"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "desert-west"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "desert-south",
+        "options": [
+          "desert-west",
+          "desert-north",
+          "desert-south"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "desert-05",
+    "world": "desert",
+    "title": "Groß oder klein?",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "desert-big",
+      "desert-small",
+      "desert-fast"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "desert-big",
+        "options": [
+          "desert-big",
+          "desert-small",
+          "desert-fast"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "desert-small",
+        "options": [
+          "desert-big",
+          "desert-small",
+          "desert-fast"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "desert-fast",
+        "options": [
+          "desert-big",
+          "desert-small",
+          "desert-fast"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "desert-big",
+        "options": [
+          "desert-big",
+          "desert-small",
+          "desert-fast"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "desert-big"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "desert-fast",
+        "options": [
+          "desert-big",
+          "desert-small",
+          "desert-fast"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "desert-06",
+    "world": "desert",
+    "title": "Wüsten-Abenteuer",
+    "subtitle": "3 neue Wörter · 6 Aufgaben",
+    "wordIds": [
+      "desert-slow",
+      "desert-far",
+      "desert-near"
+    ],
+    "tasks": [
+      {
+        "type": "image-choice",
+        "wordId": "desert-slow",
+        "options": [
+          "desert-slow",
+          "desert-far",
+          "desert-near"
+        ]
+      },
+      {
+        "type": "audio-choice",
+        "wordId": "desert-far",
+        "options": [
+          "desert-slow",
+          "desert-far",
+          "desert-near"
+        ]
+      },
+      {
+        "type": "matching",
+        "wordId": "desert-near",
+        "options": [
+          "desert-slow",
+          "desert-far",
+          "desert-near"
+        ]
+      },
+      {
+        "type": "letter-choice",
+        "wordId": "desert-slow",
+        "options": [
+          "desert-slow",
+          "desert-far",
+          "desert-near"
+        ]
+      },
+      {
+        "type": "word-builder",
+        "wordId": "desert-slow"
+      },
+      {
+        "type": "image-choice",
+        "wordId": "desert-near",
+        "options": [
+          "desert-slow",
+          "desert-far",
+          "desert-near"
+        ]
+      }
+    ]
+  }
+]
