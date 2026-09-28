@@ -2,6 +2,8 @@
 
 **Spielen. Entdecken. Arabisch lernen.** Ein lokales Web-Lernspiel für deutschsprachige Kinder von etwa 7 bis 12 Jahren.
 
+Jetzt kostenlos online: **<https://revucio24-web.github.io/yalla-quest/>**
+
 ## Was schon spielbar ist
 
 - Profilstart mit Spitzname und Avatar
@@ -21,12 +23,18 @@ React, TypeScript und Vite. Die statische App benötigt im Betrieb keinen Server
 
 ## Lokal starten
 
-Node.js 20 oder neuer und pnpm werden empfohlen.
+Node.js 20 oder neuer und pnpm werden empfohlen. pnpm ist nicht bei Node.js dabei; einmalig holen:
+
+```bash
+corepack enable pnpm
+```
 
 ```bash
 pnpm install
 pnpm dev
 ```
+
+Alternativ funktioniert auch `npm install` und `npm run dev`, dann greift allerdings `package-lock.json` statt `pnpm-lock.yaml`.
 
 Anschließend die angezeigte lokale Adresse öffnen. Für die Produktionsprüfung:
 
@@ -42,12 +50,27 @@ Der fertige statische Build liegt in `dist/`.
 
 ## Veröffentlichen
 
-- **Vercel:** Repository importieren, Framework „Vite“ wählen, Build-Befehl `pnpm build`, Ausgabeverzeichnis `dist`.
-- **Cloudflare Pages:** Repository verbinden, Build-Befehl `pnpm build`, Build-Ausgabeverzeichnis `dist`.
+Das Spiel ist kostenlos veröffentlicht unter:
 
-Es sind keine Umgebungsvariablen nötig. Die App wurde lokal gebaut und geprüft; eine Veröffentlichung ist noch nicht erfolgt.
+**<https://revucio24-web.github.io/yalla-quest/>**
 
-Die Sicherheits-Header liegen bereits bei: `vercel.json` und `public/_headers` (wird nach `dist/` kopiert). Zusätzlich trägt `index.html` eine `Content-Security-Policy` als `<meta>`, falls ein Hoster keine Header-Konfiguration auswertet. Beim Dev-Server entfernt ein kleines Plugin aus `vite.config.ts` diese Meta-Angabe, weil Vite dort Inline-Skripte und eine WebSocket-Verbindung für Hot Reload lädt, die eine strenge CSP blockieren würde.
+### GitHub Pages (aktuell genutzt)
+
+Das Repository <https://github.com/revucio24-web/yalla-quest> ist öffentlich. Jeder Push auf `main` baut die App in GitHub Actions, prüft Typen und Tests und veröffentlicht das Ergebnis. Die Einrichtung steckt vollständig in `.github/workflows/deploy.yml`; manuell starten lässt sich der Lauf über den Reiter „Actions“.
+
+GitHub Pages liefert das Spiel unter `/yalla-quest/` aus, also nicht an der Domainwurzel. Deshalb setzt der Workflow `BASE_PATH=/yalla-quest/`, und `vite.config.ts` leitet den Wert an Vites `base` weiter. Wichtig dabei: Vite ergänzt `base` nur bei statischen Importen. Die Laufzeitpfade aus `public/` (Maskottchen und alle Audiodateien) stehen als Zeichenketten in den JSON-Daten, deshalb löst `src/lib/assets.ts` sie zur Laufzeit über `import.meta.env.BASE_URL` auf. Ohne diesen Helfer liefe auf GitHub Pages jedes Audio ins Leere, während der Build auf der lokalen Vorschau noch fehlerfrei wirkt.
+
+### Andere kostenlose Hoster
+
+Bei Hoster, die an der Domainwurzel ausliefern, bleibt `BASE_PATH` leer:
+
+- **Vercel:** Repository importieren, Framework „Vite“ wählen, Build-Befehl `pnpm build`, Ausgabeverzeichnis `dist`. Die Header liegen in `vercel.json`.
+- **Cloudflare Pages:** Repository verbinden, Build-Befehl `pnpm build`, Build-Ausgabeverzeichnis `dist`. Die Header liegen in `public/_headers` und werden mit nach `dist/` kopiert.
+- **Netlify:** Repository verbinden, Build-Befehl `pnpm build`, Verzeichnis `dist`, `public/_headers` wird ausgewertet.
+
+Es sind keine Umgebungsvariablen und keine Geheimnisse nötig. Aktions-Minuten sind für öffentliche Repositories unbegrenzt kostenlos.
+
+Die Sicherheits-Header liegen bereits bei: `vercel.json` und `public/_headers` (wird nach `dist/` kopiert). Zusätzlich trägt `index.html` eine `Content-Security-Policy` als `<meta>`. Das ist auf GitHub Pages der einzige wirksame Weg, weil Pages keine eigenen Header auswertet. Beim Dev-Server entfernt ein kleines Plugin aus `vite.config.ts` diese Meta-Angabe, weil Vite dort Inline-Skripte und eine WebSocket-Verbindung für Hot Reload lädt, die eine strenge CSP blockieren würde.
 
 ## Inhalte erweitern
 
