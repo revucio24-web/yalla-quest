@@ -60,9 +60,14 @@ jobs:
     name: Cloudflare Pages
     needs: build
     # Auto-Deploy laesst sich mit der Repository-Variable
-    # CLOUFFLARE_DEPLOY=false abschalten, ohne die Datei zu aendern.
-    if: ${{ vars.CLOUDFLARE_DEPLOY != 'false' }}
+    # CLOUDFLARE_DEPLOY=off abschalten, ohne diese Datei zu aendern.
+    if: ${{ vars.CLOUDFLARE_DEPLOY != 'off' }}
     runs-on: ubuntu-latest
+    # Das Token wird ueber eine Job-Variable geholt, weil der Kontext
+    # 'secrets' in einer if-Bedingung nicht erlaubt ist. Ohne hinterlegtes
+    # Token entfaellt nur der Veroeffentlichungsschritt, der Lauf bleibt gruen.
+    env:
+      CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     steps:
       - name: dist aus dem Build laden
         uses: actions/download-artifact@v4
@@ -70,13 +75,10 @@ jobs:
           name: dist
           path: dist
 
-      # Ohne hinterlegtes Token ueberspringen wir nur diesen Schritt, der
-      # Lauf bleibt gruen. Sobald das Secret existiert, greift der Schritt
-      # bei jedem Push automatisch.
       - name: Nach Cloudflare Pages veroeffentlichen
-        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+        if: env.CLOUDFLARE_TOKEN != ''
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ env.CLOUDFLARE_TOKEN }}
           accountId: 766659b5f1eadc617c87f03cd8358eed
           command: pages deploy dist --project-name=yalla-quest --branch=main
